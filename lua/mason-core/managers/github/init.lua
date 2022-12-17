@@ -92,7 +92,7 @@ function M.release_file(opts)
         )
     end
     local download_url = settings.current.github.download_url_template:format(opts.repo, source.release, asset_file)
-    print("Download URL: " .. download_url)
+    print("Download URL: " .. vim.inspect(download_url))
     return {
         release = source.release,
         download_url = download_url,
