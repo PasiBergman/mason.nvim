@@ -19,7 +19,8 @@ return Pkg.new {
                     .untargz_release_file({
                         repo = "Samsung/netcoredbg",
                         asset_file = _.coalesce(
-                            _.when(platform.is.mac, "netcoredbg-osx-amd64.tar.gz"),
+                            _.when(platform.is.mac_x64, "netcoredbg-osx-amd64.tar.gz"),
+                            _.when(platform.is.mac_arm64, "netcoredbg-macos-arm64.tar.gz"),
                             _.when(platform.is.linux_x64, "netcoredbg-linux-amd64.tar.gz"),
                             _.when(platform.is.linux_arm64, "netcoredbg-linux-arm64.tar.gz")
                         ),
